@@ -15,16 +15,9 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    body: {
+    contents: {
       type: DataTypes.TEXT,
       allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
     },
   },
   {

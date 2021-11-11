@@ -1,6 +1,7 @@
-const { Posts } = require('../models');
+const { Post } = require('../models');
+const { User } = require('../models');
 
-const Postsdata = [
+const Postdata = [
   {
     title: "Blog One",
     contents: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu diam lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque rhoncus laoreet erat, eu ornare erat ultricies ac. In posuere magna at ultricies rutrum. Donec ultricies neque non erat vehicula, non tincidunt dolor rutrum. Maecenas nec elit eu sapien dignissim gravida vitae eu turpis. Fusce et tempus tellus, sit amet tincidunt purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
@@ -23,6 +24,6 @@ const Postsdata = [
   },
 ];
 
-const seedGallery = () => Gallery.bulkCreate(gallerydata);
+const seedPosts = () => Post.bulkCreate(Postdata);
 
-module.exports = seedGallery;
+module.exports = seedPosts;

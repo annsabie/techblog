@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-router.post("/", (req, res) => {
+router.post("/signup", (req, res) => {
   User.create({
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
   })
   .then(dbUserData => {
     req.session.save(() => {
@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
       res.json(dbUserData);
     });
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
     res.status(500).json(err);
   });
@@ -25,7 +25,7 @@ router.post("/login", (req, res) => {
   User.findOne({
     where: {
       username: req.body.username
-    }
+    },
   }).then(dbUserData => {
     if (!dbUserData) {
       res.status(400).json({ message: 'No user account found!' });
