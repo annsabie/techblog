@@ -24,18 +24,18 @@
       <li class="nav-item">
         <a class="nav-link text-dark" href="/dashboard">Dashboard</a>
       </li>
-    {{#if loggedIn}}
       <li class="nav-item">
-        <a class="nav-link text-dark" href="js/logout.js">Logout</a>
+        <a class="nav-link text-dark" id="logout-link" href="/logout">Logout</a>
       </li>
        <li class="nav-item">
         <a class="nav-link text-dark" href="/newpost">New Post</a>
       </li>
-    {{else}}
       <li class="nav-item">
         <a class="nav-link text-dark" href="/login">Login</a>
       </li>
-    {{/if}}
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/signup">Signup</a>
+      </li>
     </ul>
   </nav>
 
@@ -46,6 +46,6 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
+  <script src="/js/logout.js"></script>
 </body>
 </html>

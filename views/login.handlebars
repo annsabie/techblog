@@ -1,37 +1,17 @@
-<div class="card-deck">
-  <div class="card" id="loginform">
-    <div class="card-body">
-      <h5 class="card-title">Log In</h5>
-       <div class="form-group">
-        <label for="exampleInputEmail1">Username</label>
-        <input type="email" class="form-control" id="username-login" aria-describedby="emailHelp">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="password-login">
-      </div>
-      <button type="submit" class="btn btn-primary" id="loginbutton">Log In</button>
-    </div>
-  </div>
-  <div class="card" id="signupform">
-    <div class="card-body">
-      <h5 class="card-title">Sign Up</h5>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
-          <input type="email" class="form-control" id="username-signup" aria-describedby="emailHelp">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="email-signup">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="password-signup">
-        </div>
-        <button type="submit" class="btn btn-primary" id="signupbutton">Sign Up</button>
-  </div>
+<div class="card" id="login-box">
+<div class="card-header">
+<h2>Login</h2>
+</div>
+<form id="login-form" class="card-body">
+<div>
+<label for="username-input-login">Username</label>
+<input type="text" id="username-input-login" />
+</div>
+<div>
+<label for="password-input-login" class="form-label">Password</label>
+<input type="password" id="password-input-login" />
+</div>
+<button type="submit" id="login-btn" class="btn">Login!</button>
+</form>
 </div>
 <script src="/js/login.js"></script>
-<script src="/js/signup.js"></script>
-
-

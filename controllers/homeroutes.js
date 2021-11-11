@@ -39,20 +39,28 @@ router.get("/post/:id", (req, res) => {
     });
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  res.render("login");
+router.get('/login', async(req, res) => {
+  try {
+      res.render('login');
+  } catch (err) {
+      res.status(500).json(err);
+  };
 });
 
-router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  res.render("signup");
+router.get('/logout', async(req, res) => {
+  try {
+      res.render('logout', { loggedIn: req.session.logged_in });
+  } catch (err) {
+      res.status(500).json(err);
+  };
+});
+
+router.get('/signup', async(req, res) => {
+  try {
+      res.render('signup', { loggedIn: req.session.logged_in });
+  } catch (err) {
+      res.status(500).json(err);
+  };
 });
 
 module.exports = router;
